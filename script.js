@@ -23,7 +23,7 @@ $("#hour-14 .description").val(localStorage.getItem("hour-14"))
 $("#hour-15 .description").val(localStorage.getItem("hour-15"))
 $("#hour-16 .description").val(localStorage.getItem("hour-16"))
 $("#hour-17 .description").val(localStorage.getItem("hour-17"))
-
+// Color code the time blocks according to past present or future 
 $(".time-block").each(function(){
   var blockTime = parseInt($(this).attr("id").split("-")[1])
   if(blockTime<currentHour){
