@@ -7,3 +7,4 @@ This web app is used to plan out your day hour by hour from 9AM to 5PM. Items ad
 <img src = "assets/work-day-scheduler-screenshot.png">
 
 # Link to website 
+https://mcgrane18482.github.io/05-work-day-scheduler/ 
