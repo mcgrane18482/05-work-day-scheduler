@@ -4,7 +4,37 @@
 var main = $('#main');
 var currentHour = dayjs().hour()
 
+var hours = {
+  9: 'nine',
+  10: 'ten',
+  11: 'eleven',
+  12: 'twelve',
+  13: 'one',
+  14: 'two',
+  15: 'three',
+  16: 'four',
+  17: 'five',
+}
+
 $(function () {
+  $(".saveBtn").on("click", function(event){
+    event.preventDefault()
+    var text = $(this).siblings(".description").val()
+    var hour = $(this).parent().attr("id")
+   localStorage.setItem(hour, text)
+  })
+
+$("#hour-9 .description").val(localStorage.getItem("hour-9"))
+$("#hour-10 .description").val(localStorage.getItem("hour-10"))
+$("#hour-11 .description").val(localStorage.getItem("hour-11"))
+$("#hour-12 .description").val(localStorage.getItem("hour-12"))
+$("#hour-13 .description").val(localStorage.getItem("hour-13"))
+$("#hour-14 .description").val(localStorage.getItem("hour-14"))
+$("#hour-15 .description").val(localStorage.getItem("hour-15"))
+$("#hour-16 .description").val(localStorage.getItem("hour-16"))
+$("#hour-17 .description").val(localStorage.getItem("hour-17"))
+
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
